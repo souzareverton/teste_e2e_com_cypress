@@ -1,12 +1,14 @@
 describe('Login', () => {
   it('successfully log in', () => {
-    let emailAddress = Cypress.env('USER_EMAIL1') || Cypress.env('USER_EMAIL')
-    let password = Cypress.env('USER_PASSWORD1') || Cypress.env('USER_PASSWORD')
+    let emailAddress = process.env.CYPRESS_USER_EMAIL1 || Cypress.env('USER_EMAIL')
+    let password = process.env.CYPRESS_USER_PASSWORD1 || Cypress.env('USER_PASSWORD')
 
     // if (!emailAddress || !password){
     //   emailAddress =
     //   password =
     // }
+    console.log(emailAddress)
+    console.log(password)
 
     cy.intercept('GET', '**/notes').as('getNotes')
 
