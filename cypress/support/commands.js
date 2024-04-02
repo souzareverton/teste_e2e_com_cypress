@@ -7,7 +7,8 @@ Cypress.Commands.add('fillSignUpFormAndSubmit', (email, password) => {
   cy.contains('button', 'Signup').click()
   cy.get('#confirmationCode').should('be.visible')
 
-  cy.mailosaurGetMessage(Cypress.env.CYPRESS_MAILOSAUR_SERVER_ID || Cypress.env('MAILOSAUR_SERVER_ID'), {
+  const mailosaur_id = Cypress.env.CYPRESS_MAILOSAUR_SERVER_ID || Cypress.env('MAILOSAUR_SERVER_ID')
+  cy.mailosaurGetMessage((mailosaur_id), {
     sentTo: email
   }).then(message => {
     // Pode ser de uma das duas formas abaixo
