@@ -1,7 +1,7 @@
 {
   "name": "teste_e2e_com_cypress",
   "version": "1.0.0",
-  "description": "TBD.",
+  "description": "Sample project to demonstrate end-to-end (e2e) tests written with [Cypress](https://cypress.io) running on GitHub Actions.",
   "main": "cypress.config.js",
   "scripts": {
     "cy:open": "cypress open",
@@ -14,7 +14,7 @@
     "test:tablet:cloud": "cypress run --record --tag 'tablet' --config viewportWidth=767,viewportHeight=480 --spec cypress/e2e/authenticated.cy.js --env grepTags=@desktop-and-tablet,grepOmitFiltered=true"
   },
   "keywords": [],
-  "author": "",
+  "author": "Everton Rodrigues",
   "license": "MIT",
   "devDependencies": {
     "@cypress/grep": "^3.1.5",

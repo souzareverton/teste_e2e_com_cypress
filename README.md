@@ -1,5 +1,11 @@
 # Testes _end-to-end_ com Cypress
 
+Como pré-condição é necessário ter o NodeJS e o GIT instalados
+
+- [git](https://git-scm.com/downloads) (Foi utilizada a versão `2.34.1`)
+- [Node.js](https://nodejs.org/en/) (Foi utilizada a versão `v18.15.0`)
+- npm (Foi utilizada a versão `9.5.0` ), o npm é instalado junto com o NodeJS
+
 Para executar os testes localmente, após realizar um fork e o download ou apenas o download, executar o comando:
 
 npm install

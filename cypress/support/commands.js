@@ -20,7 +20,7 @@ Cypress.Commands.add('fillSignUpFormAndSubmit', (email, password) => {
   })
 })
 
-Cypress.Commands.add('fillLoginFormAndSubmit', (
+Cypress.Commands.add('guiLogin', (
   email = Cypress.env('USER_EMAIL'),
   password = Cypress.env('USER_PASSWORD')
 ) => {
@@ -37,7 +37,7 @@ Cypress.Commands.add('sessionLogin', (
   email = Cypress.env('USER_EMAIL'),
   password = Cypress.env('USER_PASSWORD')
 ) => {
-  const login = () => cy.fillLoginFormAndSubmit(email, password)
+  const login = () => cy.guiLogin(email, password)
   cy.session(email, login)
 })
 
