@@ -30,7 +30,7 @@ jobs:
           CYPRESS_USER_PASSWORD: ${{ secrets.CYPRESS_USER_PASSWORD1 }}
           CYPRESS_MAILOSAUR_SERVER_ID: ${{ secrets.CYPRESS_MAILOSAUR_SERVER_ID1 }}
         with:
-          command: npm test
+          command: npm test:clould
   cypress-tests-tablet:
     needs: eslint
     runs-on: ubuntu-22.04
@@ -40,7 +40,8 @@ jobs:
       - name: Run end-to-end tests on tablet viewport 🧪
         uses: cypress-io/github-action@v6
         env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           CYPRESS_USER_EMAIL: ${{ secrets.CYPRESS_USER_EMAIL1 }}
           CYPRESS_USER_PASSWORD: ${{ secrets.CYPRESS_USER_PASSWORD1 }}
         with:
-          command: npm run test:tablet
+          command: npm run test:tablet:cloud
