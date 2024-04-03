@@ -14,6 +14,7 @@ jobs:
                 record: true
         env:
             CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+            CYPRESS_MAILOSAUR_API_KEY: ${{ secrets.CYPRESS_MAILOSAUR_API_KEY }}
             CYPRESS_USER_EMAIL: ${{ secrets.CYPRESS_USER_EMAIL1 }}
             CYPRESS_USER_PASSWORD: ${{ secrets.CYPRESS_USER_PASSWORD1 }}
             CYPRESS_MAILOSAUR_SERVER_ID: ${{ secrets.CYPRESS_MAILOSAUR_SERVER_ID1 }}
